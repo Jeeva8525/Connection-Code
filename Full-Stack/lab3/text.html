@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+<script>
+  fetch("student.xml")
+    .then(response => response.text())
+    .then(xmlText => {
+      const parser = new DOMParser();
+      const xmlDoc = parser.parseFromString(xmlText, "text/xml");
+
+      const name = xmlDoc.getElementsByTagName("name")[0].textContent;
+      const dept = xmlDoc.getElementsByTagName("department")[0].textContent;
+      const year = xmlDoc.getElementsByTagName("year")[0].textContent;
+
+      console.log(name, dept, year);
+    });
+</script>
+
+</html>
