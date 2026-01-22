@@ -1,0 +1,34 @@
+<StudentData>
+    <student>
+        <name>Jeeva</name>
+        <id> 3554 </id>
+        <dept> CSE </dept>
+        <mark1> 100 </mark1>
+        <mark2> 99 </mark2>
+        <mark3> 97 </mark3>
+    </student>
+    <student>
+        <name>Agariyan</name>
+        <id> 3551 </id>
+        <dept> CSE </dept>
+        <mark1> 95 </mark1>
+        <mark2> 63 </mark2>
+        <mark3> 96 </mark3>
+    </student>
+    <student>
+        <name>Kishore</name>
+        <id> 3548 </id>
+        <dept> CSE </dept>
+        <mark1> 90 </mark1>
+        <mark2> 99 </mark2>
+        <mark3> 98 </mark3>
+    </student>
+    <student>
+        <name>John Doe</name>
+        <id> 3511 </id>
+        <dept> CSE </dept>
+        <mark1> 45 </mark1>
+        <mark2> 39 </mark2>
+        <mark3> 11 </mark3>
+    </student>
+</StudentData>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head> 
+<body>
+    <div class="input-container" style="display: flex;">
+        <div class="input-container-details">
+            <table>
+                <tr>
+                    <td>Student Name: </td><td><input type="text" id="studentName"></td>
+                </tr>
+                <tr>
+                    <td>Marks in Subject 1 : </td><td><input type="number" min="0" max="100" size=18 value=0 id="subjectMark1"></td>
+                </tr>
+                <tr>
+                    <td>Marks in Subject 2 : </td><td><input type="number" min="0" max="100" size=18 value=0 id="subjectMark2"></td>
+                </tr>
+                <tr>
+                    <td>Marks in Subject 3 : </td><td><input type="number" min="0" max="100" size=18 value=0 id="subjectMark3"></td>
+                </tr>
+            </table>
+        </div>
+        <div class="input-container-button" style="margin-top: 80px">
+            <button>Add Student</button>
+        </div>
+    </div>
+
+    <div class="display-table">
+        <table>
+            <tr style="background-color: rgb(116, 116, 221);">
+                <td>Name</td><td>Marks</td><td>Total Marks</td><td>Percentage</td><td>Grade</td>
+            </tr>
+        </table>
+    </div>
+    <button id="highestGradeButton" onclick="showHighestScoringStudent()">
+        Show Highest Scoring Student
+    </button>
+</body>
+<script src="script.js"></script>
+</html>

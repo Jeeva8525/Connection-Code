@@ -1,0 +1,22 @@
+table { 
+    width: 100%;
+    border-collapse: collapse; 
+    margin-top: 20px; 
+}
+
+th, td { 
+    border: 1px solid #ddd; 
+    padding: 10px; 
+    text-align: center; 
+}
+
+.topper { 
+    background-color: #d4edda; 
+    color: #155724; 
+    font-weight: bold; 
+} 
+
+.failed { 
+    background-color: #f8d7da;
+     color: #721c24;
+}             

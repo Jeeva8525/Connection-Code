@@ -1,0 +1,34 @@
+.input-container-details{
+
+}
+
+.display-table table{
+    width : 90vw;
+    /* background-color: gray; */
+    border: none;
+    border-collapse: collapse;
+}
+
+.display-table table tr{
+    border: 1px solid black;
+}
+
+.display-table table tr:nth-child(1){
+    height: 40px;
+}
+
+.display-table table:nth-child(2){
+    background-color: gray;
+}
+/* .display-table table tr:nth-child(even){
+    background-color: white;
+}
+
+.display-table table tr:nth-child(2){
+    background-color: gray;
+} */
+
+#highestGradeButton{
+    margin : auto;
+    height: 30px;
+}

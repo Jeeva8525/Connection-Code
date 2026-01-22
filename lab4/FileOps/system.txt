@@ -1,0 +1,2 @@
+System Type : Linux 
+System memory : 16542265344

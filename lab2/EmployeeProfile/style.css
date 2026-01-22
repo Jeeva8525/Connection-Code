@@ -1,0 +1,22 @@
+h3{
+    text-align: center;
+}
+
+.profile-container{
+    border : 2px black solid;
+    width: 500px;
+    margin: auto;
+    padding :0px 20px;
+}
+
+.details{
+    display: flex;
+}
+
+.image-container{
+    margin-right : 20px;
+}
+
+p{
+    margin-bottom: 40px;
+}

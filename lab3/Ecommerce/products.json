@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "name": "Laptop",
+    "category": "Electronics",
+    "price": 800,
+    "stock": 5,
+    "url" : "images/laptop.webp"
+  },
+  {
+    "id": 2,
+    "name": "Desk",
+    "category": "Furniture",
+    "price": 150,
+    "stock": 12,
+    "url" : "images/desk.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Tea Maker",
+    "category": "Appliances",
+    "price": 50,
+    "stock": 2,
+    "url" : "images/tea_maker.jpeg"
+  },
+  {
+    "id": 4,
+    "name": "Airpods",
+    "category": "Electronics",
+    "price": 100,
+    "stock": 15,
+    "url" : "images/airpods.webp"
+  }
+]

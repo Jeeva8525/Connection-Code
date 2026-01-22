@@ -1,0 +1,36 @@
+{
+    "products" : [
+        {
+            "id" : 101,
+            "name" : "Laptop",
+            "category" : "electrical",
+            "price" : 300000,
+            "stock" : 2,
+            "url" : "images/laptop.webp"
+        },
+        {
+            "id" : 102,
+            "name" : "Charger",
+            "category" : "electrical",
+            "price" : 1500,
+            "stock" : 20,
+            "url" : "images/laptop.webp"
+        },
+        {
+            "id" : 101,
+            "name" : "Laptop",
+            "category" : "electrical",
+            "price" : 300000,
+            "stock" : 2,
+            "url" : "images/laptop.webp"
+        },
+        {
+            "id" : 102,
+            "name" : "Charger",
+            "category" : "electrical",
+            "price" : 1500,
+            "stock" : 20,
+            "url" : "images/laptop.webp"
+        }
+    ]    
+}
