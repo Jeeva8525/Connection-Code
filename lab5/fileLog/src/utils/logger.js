@@ -15,11 +15,14 @@ export function writeToFile(body) {
     const logPath = path.join(__dirname, '../DataStore/app.log');
     const logEntry = `${new Date().toISOString()} - ${userName}: ${msg}\n`;
 
+    
     fs.appendFile(logPath, logEntry, (err) => {
         if (err) {
             console.error('Failed to write to file:', err);
+            return `err : ${err}`
         } else {
             console.log('Log entry saved successfully');
+            return null
         }
     });
 }

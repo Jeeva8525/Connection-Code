@@ -12,7 +12,10 @@ async function sendData(){
         })
     })
 
-    if(!response.ok){
-        console.log('not ok')
+    if(response.ok){
+        document.body.innerHTML += `Successfully Written`
+    } else {
+        document.body.innerHTML += `Error occured`
     }
+
 }   
