@@ -3,7 +3,7 @@ import { log } from 'node:console';
 import { writeToFile,readToFile } from './utils/fileService.js';
 import path from 'path';
 import EventEmitter from 'node:events';
-import { startFileMonitor } from './utils/fileService.js';
+import { startFileMonitor } from './utils/timerService.js';
 
 const emitter = new EventEmitter();
 
