@@ -1,0 +1,14 @@
+[
+  {
+    "bookId": "111",
+    "title": "The Author",
+    "author": "Saint John",
+    "status": "Available"
+  },
+  {
+    "bookId": "112",
+    "title": "The Book",
+    "author": "Peter Paul",
+    "status": "Available"
+  }
+]

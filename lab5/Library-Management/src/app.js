@@ -1,9 +1,8 @@
 import express from 'express';
 import { log } from 'node:console';
-import { writeToFile,readToFile } from './utils/libraryService.js';
+import { writeToFile,readToFile,issueBook } from './utils/libraryService.js';
 import path from 'path';
 import EventEmitter from 'node:events';
-import { startFileMonitor } from './utils/timerService.js';
 
 const emitter = new EventEmitter();
 
@@ -24,25 +23,34 @@ const __dirname = '/home/fstq/Documents/fst/Connection-Code/lab5/FileStreams/'
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json())
 
-app.post('/api/msg',(req,res) => {
+app.post('/api/addBook',(req,res) => {
     const body = req.body;
     
+
     const isErr = writeToFile(body);
 
     if(!isErr)
         emitter.emit('write');
     else
         emitter.emit('err')
-
     
-    setTimeout(() => {
-        log('Log process complete');
-    },2000)
-    
-    res.end('sent success post')
+    res.end('sent book to library')
 })
 
-app.get('/api/msg',(req,res) => {
+app.post('/api/issue/:id',(req,res) => {
+
+    const params = req.params
+    const isErr = issueBook(params.id);
+
+    if(!isErr)
+        emitter.emit('write');
+    else
+        emitter.emit('err')
+
+    res.end('issue book from library')
+})
+
+app.get('/api/getAllBooks',(req,res) => {
 
     log(' read file initiated');
     const isErr = readToFile(res);
@@ -52,14 +60,8 @@ app.get('/api/msg',(req,res) => {
     else
         emitter.emit('err')
 
-    
-/*     setInterval(() => {
-        log('Interval called())');
-    },2000) */
-    
 })
 
-app.listen(6001,() => {
-    startFileMonitor();
-    log('Navigate through http://localhost:6001');
+app.listen(7000,() => {
+    log('Navigate through http://localhost:7000');
 })

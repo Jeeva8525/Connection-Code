@@ -7,7 +7,7 @@ const __dirname = path.dirname(__filename);
 
 
 export function startFileMonitor() {
-  const logPath = path.join(__dirname, "../DataStore/streamData.txt");
+  const logPath = path.join(__dirname, "../DataStore/library.json");
 
   const monitoId = setInterval(() => {
     fs.stat(logPath, (err, stats) => {
