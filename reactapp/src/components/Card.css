@@ -1,0 +1,8 @@
+.single-card{
+    width : 70px;
+    height : 60px;
+    background-color: rgba(128, 128, 128, 0.26);
+    text-align: center;
+    padding-top: 50px; 
+    margin-top: 50px;
+}

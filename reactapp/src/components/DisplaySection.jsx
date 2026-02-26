@@ -1,23 +1,29 @@
-import { useRef } from "react";
-
+import { useState } from "react";
+import { Card } from "./Card";
+import './DisplaySection.css'
 export function DisplaySection({bodyElement}) {
-    const buttonRef = useRef(null);
     
-    function changeColor() {
-        const buttonElement = buttonRef.current;
-        const red = Math.floor(Math.random()*255);
-        const green = Math.floor(Math.random()*255);
-        const blue = Math.floor(Math.random()*255);
-        buttonElement.style.backgroundColor = `rgb(${red},${green},${blue})`;
+    let arr=[{'ind':0,
+        val:1
+    },2,3,6,1,2,4,3,4];
+
+    for (let x=1;x<=9;x++){
+        
     }
+    const [click,setClick]  = useState([false,false,false,false,false,false,false,false,false]);
+
+
     return (
-        <>
-            <button
-                ref={buttonRef}
-                onClick={changeColor}
-            >
-            Change Color
-            </button>
-        </>
+        <div className='whole-container'>
+            {
+                arr.map((elt) => {
+                    return (
+                        <>
+                            <Card elt={elt} ></Card>
+                        </>
+                    )
+                })
+            }
+        </div>
     );
 }
