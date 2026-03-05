@@ -1,0 +1,17 @@
+<h2>Book Catalog</h2>
+
+<input placeholder="Search books" [(ngModel)]="search">
+
+<div *ngFor="let book of filteredBooks()">
+
+<h3>{{book.title}}</h3>
+
+<p>Author: {{book.author}}</p>
+
+<a [routerLink]="['/book',book.id]">
+View Details
+</a>
+
+<hr>
+
+</div>

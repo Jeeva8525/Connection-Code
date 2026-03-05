@@ -1,0 +1,19 @@
+<h2>{{book.title}}</h2>
+
+<p>Author: {{book.author}}</p>
+
+<p *ngIf="book.available">
+Available
+</p>
+
+<p *ngIf="!book.available">
+Issued
+</p>
+
+<button (click)="book.available=false">
+Issue Book
+</button>
+
+<button (click)="book.available=true">
+Return Book
+</button>
