@@ -23,7 +23,7 @@ export class LoginComponent {
 
     if (this.auth.getRole() === 'admin') {
       this.router.navigate(['/admin']);
-    } else {s
+    } else {
       this.router.navigate(['/books']);
     }
 
