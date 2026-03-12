@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom"
-
+import './Login.css'
 export default function Login({ username, password, setUsername, setPassword, setIsAdmin }) {
 
 
@@ -50,7 +50,7 @@ export default function Login({ username, password, setUsername, setPassword, se
                         </td>
                     </tr>
                     <tr >
-                        <td colSpan="2">
+                        <td colSpan="2" className="submit-button-row">
                             <button 
                                 style={{marginLeft: '40%' }}
                                 onClick={handleLogin}

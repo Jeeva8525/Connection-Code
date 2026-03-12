@@ -45,7 +45,6 @@ export default function Home({books, setBooks, isAdmin}){
     }
 
     function handleChangeAvailability(bid){
-        console.log('clicked')
         setBooks(
             books.map((b)=>{
                 if(b.id === bid){
@@ -57,7 +56,7 @@ export default function Home({books, setBooks, isAdmin}){
     }
 
     return (
-        <>
+        <div className='home-container'>
             <div className="search-container">
                 <input 
                     type="text" 
@@ -114,6 +113,6 @@ export default function Home({books, setBooks, isAdmin}){
             }
 
 
-        </>
+        </div>
     )
 } 
