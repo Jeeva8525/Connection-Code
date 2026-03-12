@@ -1,13 +1,52 @@
 import './App.css'
 import { BrowserRouter, Routes, Route} from 'react-router-dom'
+import { useState } from 'react';
 import Home from './components/Home/Home';
+import Login from './components/Login/Login';
 function App() {
+
+
+    const [username, setUsername] = useState('');
+    const [password, setPassword] = useState('');
+
+	const [books,setBooks] = useState(
+		[
+			{
+				id:1,
+				name : 'Sun of the sky',
+				isIssued : false
+			},
+			{
+				id:2,
+				name : 'Legends never die',
+				isIssued : false
+			},
+			{
+				id:3,
+				name : 'The jumping mario',
+				isIssued : false
+			}
+		]
+	)
 
   return (
     <>
       <BrowserRouter>
 	  	<Routes>
-			<Route path='/' element={<Home />} />
+			<Route path='/' element={
+				<Login 
+					username={username}				
+					password={password}				
+					setUsername={setUsername}				
+					setPassword={setPassword}				
+				/>
+			} />
+			<Route path='/home' element={
+				<Home 
+					books={books}
+					setBooks={setBooks}				
+				/>
+			} />
 		</Routes>
 	  </BrowserRouter>
     </>
