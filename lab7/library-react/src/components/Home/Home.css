@@ -20,6 +20,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top:5px;
+    margin-bottom:5px;
 }
 
 p{
@@ -28,4 +30,8 @@ p{
 
 button{
     margin-bottom: 20px; 
+}
+
+.not-available{
+    border : 2px solid red;
 }

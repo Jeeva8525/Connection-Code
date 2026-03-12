@@ -1,16 +1,20 @@
 import { useNavigate } from "react-router-dom"
 
-export default function Login({ username, password, setUsername, setPassword }) {
+export default function Login({ username, password, setUsername, setPassword, setIsAdmin }) {
+
 
     const navigate=useNavigate();
     function handleLogin(){
-        if(username==='admin' && password==='admin123'){
+        if(username==='a' && password==='b'){
+            setIsAdmin(true)
             navigate('/home');
         }
-        else if(username==='std' && password==='comein'){
-            navigate('/');
+        else if(username==='c' && password==='d'){
+            setIsAdmin(false)
+            navigate('/home');
         }
         else {
+            setIsAdmin(false)
             setUsername('Invalid Credentials')
             setTimeout(()=>{
                 setUsername('')

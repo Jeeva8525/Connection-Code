@@ -8,23 +8,28 @@ function App() {
 
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+	const [isAdmin, setIsAdmin ] = useState(false);
+
 
 	const [books,setBooks] = useState(
 		[
 			{
 				id:1,
 				name : 'Sun of the sky',
-				isIssued : false
+				isIssued : false,
+				isAvailable : true
 			},
 			{
 				id:2,
 				name : 'Legends never die',
-				isIssued : false
+				isIssued : false,
+				isAvailable : true
 			},
 			{
 				id:3,
 				name : 'The jumping mario',
-				isIssued : false
+				isIssued : false,
+				isAvailable : true
 			}
 		]
 	)
@@ -38,13 +43,15 @@ function App() {
 					username={username}				
 					password={password}				
 					setUsername={setUsername}				
-					setPassword={setPassword}				
+					setPassword={setPassword}
+					setIsAdmin={setIsAdmin}				
 				/>
 			} />
 			<Route path='/home' element={
 				<Home 
 					books={books}
-					setBooks={setBooks}				
+					setBooks={setBooks}	
+					isAdmin={isAdmin}			
 				/>
 			} />
 		</Routes>

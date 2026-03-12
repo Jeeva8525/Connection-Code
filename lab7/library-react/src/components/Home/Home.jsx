@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './Home.css'
-export default function Home({books, setBooks}){
+export default function Home({books, setBooks, isAdmin}){
 
     const [searchItem, setSearchItem] = useState('');
 
@@ -44,6 +44,18 @@ export default function Home({books, setBooks}){
         setSearchItem(name);
     }
 
+    function handleChangeAvailability(bid){
+        console.log('clicked')
+        setBooks(
+            books.map((b)=>{
+                if(b.id === bid){
+                    return {...b, isAvailable: !b.isAvailable}
+                }
+                return b
+            })
+        )
+    }
+
     return (
         <>
             <div className="search-container">
@@ -56,27 +68,52 @@ export default function Home({books, setBooks}){
 
             {
                 filteredBooks.map((b) => {
+
+                    let clsName = "book"
+                    if (!b.isAvailable){
+                        clsName ="book not-available" 
+                    }
                     return (
-                        <div className="book" key={b.id}>
+                        <div className={clsName} key={b.id}>
                             <p>Title : {b.name}</p> 
 
-                            {b.isIssued &&
+                            {b.isIssued && b.isAvailable &&
                                 <>
                                     <p> Status : Issued</p>
+
                                     <button onClick={()=>handleReturnBook(b.id)}>Return book</button>
                                 </>
                              }
-                            {!b.isIssued && 
+                            {(!b.isIssued || !b.isAvailable ) && 
                                 <>
-                                    <p> Status : Available</p>
-                                    <button onClick={()=>handleIssueBook(b.id)}>Issue Book</button> 
+                                    {
+                                        b.isAvailable &&
+                                        <>
+                                            <p> Status : Available</p>
+                                            <button onClick={()=>handleIssueBook(b.id)}>Issue Book</button> 
+                                        </>
+                                    }
+                                    {
+                                        !b.isAvailable &&
+                                        <>
+                                            <p> Status : Out of Stock</p>
+                                            <button onClick={()=>handleIssueBook(b.id)} disabled>Issue Book</button> 
+                                        </>
+                                    }
                                 </>
                             }
+                            {isAdmin &&
+                                <>
+                                    <button onClick={()=>handleChangeAvailability(b.id)}>Change Availability</button>
 
+                                </>
+                            }
                         </div>
                     )
                 })
             }
+
+
         </>
     )
 } 
