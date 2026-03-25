@@ -1,1 +1,21 @@
 3.10
+
+
+learn security
+open source
+
+Computative programming:
+code forces
+
+dbms : 
+postgres
+indexes
+caching etc..
+
+backend : 
+spring boot
+
+Learn Linux
+
+
+
